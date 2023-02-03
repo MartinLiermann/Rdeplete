@@ -1,0 +1,11 @@
+Package: Rdeplete
+Type: Package
+Title: function to estimate population size based on multi-pass depletion data
+Version: 1.1
+Date: 2012-10-29
+Author: Martin Liermann
+Maintainer: <martin.liermann@noaa.gov>
+Imports: R2jags, coda
+Description: Estimates population size based on multi-pass removal data
+License: GPL (>= 2)
+RoxygenNote: 7.1.2

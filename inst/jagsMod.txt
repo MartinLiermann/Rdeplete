@@ -1,0 +1,16 @@
+
+model{
+# A slightly modified version of code available in
+# Mantyniemi et al. 2005
+for(j in 1:k){
+C[j] ~ dbin(q[j],n[j])
+n[j+1] <- n[j]-C[j]
+q[j] <- mu*eta/(eta+j-1)
+}
+n[1] <- round(exp(u))
+u ~ dunif(0,10)
+eta <- exp(log.eta)
+log.eta ~ dunif(0,10)
+mu ~ dbeta(1.1,1.1)
+}
+
